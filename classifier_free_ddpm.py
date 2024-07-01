@@ -109,8 +109,7 @@ if __name__ == "__main__":
     else:
         device_type = "cpu"
     
-    # device = torch.device(device_type) # Select best available device
-    device = 'cuda:1'
+    device = torch.device(device_type) # Select best available device
 
     cfd = ClassifierFreeDDPM(eps_model=ConditionalUnet(in_channels=1), betas=(1e-4, 0.02), T=1000, device=device)
     train_diffusion(diffusion=cfd, device=device)
