@@ -2,12 +2,10 @@
 import torch
 import math
 from functools import partial
-from torch import nn, einsum
+from torch import nn
 from torch.nn import Module, ModuleList
 
 import torch.nn.functional as F
-from einops import rearrange, reduce, repeat
-from einops.layers.torch import Rearrange
 
 class ResidualConvBlock(nn.Module):
     def __init__(
