@@ -9,6 +9,11 @@ pip install tqdm
 pip install torchvision
 ```
 
+For Procgen rollout recording:
+```
+pip install procgen imageio
+```
+
 ## How to use
 * Denoising Diffusion Probabilistic Models (DDPM): [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
 ``` bash
@@ -28,4 +33,9 @@ python3 guided_ddpm.py
 * Classifier Free DDPM: [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598)
 ``` bash
 python3 classifier_free_ddpm.py
+```
+
+* Record a Procgen rollout video
+``` bash
+python3 record_procgen_rollout.py --env coinrun --steps 500 --out rollouts/coinrun.gif
 ```
